@@ -55,6 +55,7 @@
   do
     local event_registry = {}  -- Active callbacks for event K
     local event_queue = {}     -- Callbacks waiting to be registered for event K
+    local event_isiterating = {}
     
     local event_handler = CreateFrame('Frame')
     
@@ -172,7 +173,7 @@
         deltimer(T)
       end
       
-      func()
+      return func()
     end
     
     function mod:timer_register(delay,rpt,func)
