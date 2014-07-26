@@ -9,9 +9,9 @@ Facilities
 
 nfAddon provides the following facilities:
 
-- Will initialize your global namespace for you. No need to create some `init.lua` file filled with generic boilerplate. Provides some useful constants in that namespace. 
+- Will initialize your global namespace for you (named exactly as your addon folder name). No need to create some `init.lua` file filled with generic boilerplate. Provides some useful constants in that namespace: `.name`, `.version` (if found in TOC), `.path`, `.debuglog` (array of messages written to `:debug()` with timestamp).
 - Provides API for registering events, timers and OnUpdates to callbacks, to reduce the boilerplate associated with setting up frames for these tasks. 
-- Provides the following APIs that's generally useful for every addon: :print(), :debug() [write message to a debug log], :argcheck(), :softerror(). 
+- Provides the following APIs that's generally useful for every addon: `:print()`, `:debug()` [write message to a debug log], `:argcheck()`, `:softerror()`. 
 
 
 Why statically embedded?
