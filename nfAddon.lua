@@ -127,7 +127,7 @@
         succ,err = pcall(func,...)
         if not succ then mod:softerror(err) end
       end
-      event_isiterating[event] = false
+      event_isiterating[event] = nil
       
       for func in pairs(E_queue) do
         E_registry[func] = true

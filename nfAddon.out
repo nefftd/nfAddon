@@ -1,0 +1,575 @@
+
+main <nfAddon.lua:0,0> (70 instructions at 00000000003F8060)
+0+ params, 10 slots, 1 upvalue, 18 locals, 25 constants, 19 functions
+	1	[4]	VARARG   	0 3
+	2	[5]	GETTABUP 	2 0 -1	; _ENV "_G"
+	3	[5]	SETTABLE 	2 0 1
+	4	[7]	SETTABLE 	1 -2 0	; "name" -
+	5	[8]	GETTABUP 	2 0 -4	; _ENV "GetAddOnMetadata"
+	6	[8]	MOVE     	3 0
+	7	[8]	LOADK    	4 -5	; "Version"
+	8	[8]	CALL     	2 3 2
+	9	[8]	SETTABLE 	1 -3 2	; "version" -
+	10	[9]	LOADK    	2 -7	; "Interface\\AddOns\\"
+	11	[9]	MOVE     	3 0
+	12	[9]	CONCAT   	2 2 3
+	13	[9]	SETTABLE 	1 -6 2	; "path" -
+	14	[10]	NEWTABLE 	2 0 0
+	15	[10]	SETTABLE 	1 -8 2	; "debuglog" -
+	16	[15]	LOADK    	2 -9	; ? type=20
+	17	[21]	CLOSURE  	3 0	; 00000000003F8360
+	18	[30]	CLOSURE  	4 1	; 00000000003F81F0
+	19	[23]	SETTABLE 	1 -10 4	; "argcheck" -
+	20	[30]	JMP      	3 0	; to 21
+	21	[37]	CLOSURE  	2 2	; 00000000003F6E40
+	22	[33]	SETTABLE 	1 -11 2	; "softerror" -
+	23	[45]	CLOSURE  	2 3	; 00000000003FC370
+	24	[41]	SETTABLE 	1 -12 2	; "print" -
+	25	[51]	CLOSURE  	2 4	; 00000000003FC400
+	26	[47]	SETTABLE 	1 -13 2	; "debug" -
+	27	[56]	NEWTABLE 	2 0 0
+	28	[57]	NEWTABLE 	3 0 0
+	29	[58]	NEWTABLE 	4 0 0
+	30	[60]	GETTABUP 	5 0 -14	; _ENV "CreateFrame"
+	31	[60]	LOADK    	6 -15	; "Frame"
+	32	[60]	CALL     	5 2 2
+	33	[83]	CLOSURE  	6 5	; 00000000003FC520
+	34	[62]	SETTABLE 	1 -16 6	; "event_register" -
+	35	[100]	CLOSURE  	6 6	; 00000000003FC490
+	36	[85]	SETTABLE 	1 -17 6	; "event_unregister" -
+	37	[113]	CLOSURE  	6 7	; 00000000003FC5B0
+	38	[102]	SETTABUP 	0 -18 6	; _ENV "event_runonce"
+	39	[115]	SELF     	6 5 -19	; "SetScript"
+	40	[115]	LOADK    	8 -20	; "OnEvent"
+	41	[136]	CLOSURE  	9 8	; 00000000003FC910
+	42	[115]	CALL     	6 4 1
+	43	[136]	JMP      	3 0	; to 44
+	44	[142]	NEWTABLE 	2 0 0
+	45	[143]	NEWTABLE 	3 0 0
+	46	[145]	LOADNIL  	4 0
+	47	[147]	GETTABUP 	5 0 -14	; _ENV "CreateFrame"
+	48	[147]	LOADK    	6 -15	; "Frame"
+	49	[147]	CALL     	5 2 2
+	50	[160]	CLOSURE  	6 9	; 00000000003FC880
+	51	[164]	CLOSURE  	7 10	; 00000000003FCAC0
+	52	[177]	CLOSURE  	8 11	; 00000000003FC9A0
+	53	[166]	MOVE     	4 8
+	54	[197]	CLOSURE  	8 12	; 00000000003FCA30
+	55	[179]	SETTABLE 	1 -21 8	; "timer_register" -
+	56	[208]	CLOSURE  	8 13	; 00000000003FCBE0
+	57	[199]	SETTABLE 	1 -22 8	; "timer_unregister" -
+	58	[208]	JMP      	3 0	; to 59
+	59	[214]	NEWTABLE 	2 0 0
+	60	[215]	NEWTABLE 	3 0 0
+	61	[225]	CLOSURE  	4 14	; 00000000003FCD00
+	62	[229]	CLOSURE  	5 15	; 00000000003FCC70
+	63	[241]	CLOSURE  	6 16	; 00000000003FC640
+	64	[231]	SETTABLE 	1 -23 6	; "draw_register" -
+	65	[250]	CLOSURE  	6 17	; 00000000003FCB50
+	66	[243]	SETTABLE 	1 -24 6	; "draw_unregister" -
+	67	[262]	CLOSURE  	6 18	; 00000000003FCEB0
+	68	[252]	SETTABLE 	1 -25 6	; "draw_next" -
+	69	[262]	JMP      	3 0	; to 70
+	70	[263]	RETURN   	0 1
+
+function <nfAddon.lua:17,21> (13 instructions at 00000000003F8360)
+2+ params, 5 slots, 1 upvalue, 2 locals, 0 constants, 0 functions
+	1	[18]	TEST     	1 0
+	2	[18]	JMP      	0 10	; to 13
+	3	[19]	EQ       	1 0 1
+	4	[19]	JMP      	0 6	; to 11
+	5	[19]	GETUPVAL 	2 0	; checktypelist
+	6	[19]	MOVE     	3 0
+	7	[19]	VARARG   	4 0
+	8	[19]	CALL     	2 0 2
+	9	[19]	JMP      	0 2	; to 12
+	10	[19]	LOADBOOL 	2 0 1
+	11	[19]	LOADBOOL 	2 1 0
+	12	[19]	RETURN   	2 2
+	13	[21]	RETURN   	0 1
+
+function <nfAddon.lua:23,30> (44 instructions at 00000000003F81F0)
+3+ params, 13 slots, 3 upvalues, 5 locals, 15 constants, 0 functions
+	1	[24]	GETUPVAL 	3 0	; checktypelist
+	2	[24]	GETTABUP 	4 1 -1	; _ENV "type"
+	3	[24]	MOVE     	5 1
+	4	[24]	CALL     	4 2 2
+	5	[24]	VARARG   	5 0
+	6	[24]	CALL     	3 0 2
+	7	[24]	TEST     	3 1
+	8	[24]	JMP      	0 35	; to 44
+	9	[25]	GETTABUP 	3 1 -2	; _ENV "debugstack"
+	10	[25]	LOADK    	4 -3	; 2
+	11	[25]	LOADK    	5 -4	; 1
+	12	[25]	LOADK    	6 -5	; 0
+	13	[25]	CALL     	3 4 2
+	14	[25]	SELF     	3 3 -6	; "match"
+	15	[25]	LOADK    	5 -7	; "in function `([^']+)'"
+	16	[25]	CALL     	3 3 2
+	17	[25]	TEST     	3 1
+	18	[25]	JMP      	0 1	; to 20
+	19	[25]	LOADK    	3 -8	; "?"
+	20	[26]	LOADK    	4 -9	; "/"
+	21	[26]	SELF     	4 4 -10	; "join"
+	22	[26]	GETTABUP 	6 1 -11	; _ENV "tostringall"
+	23	[26]	VARARG   	7 0
+	24	[26]	CALL     	6 0 0
+	25	[26]	CALL     	4 0 2
+	26	[27]	GETTABUP 	5 1 -12	; _ENV "tonumber"
+	27	[27]	MOVE     	6 2
+	28	[27]	CALL     	5 2 2
+	29	[27]	TESTSET  	2 5 1
+	30	[27]	JMP      	0 1	; to 32
+	31	[27]	LOADK    	2 -8	; "?"
+	32	[28]	GETTABUP 	5 1 -13	; _ENV "error"
+	33	[28]	GETUPVAL 	6 2	; err_fmt
+	34	[28]	SELF     	6 6 -14	; "format"
+	35	[28]	MOVE     	8 2
+	36	[28]	MOVE     	9 3
+	37	[28]	MOVE     	10 4
+	38	[28]	GETTABUP 	11 1 -1	; _ENV "type"
+	39	[28]	MOVE     	12 1
+	40	[28]	CALL     	11 2 0
+	41	[28]	CALL     	6 0 2
+	42	[28]	LOADK    	7 -15	; 3
+	43	[28]	CALL     	5 3 1
+	44	[30]	RETURN   	0 1
+
+function <nfAddon.lua:33,37> (12 instructions at 00000000003F6E40)
+2 params, 6 slots, 1 upvalue, 2 locals, 4 constants, 0 functions
+	1	[34]	GETTABUP 	2 0 -1	; _ENV "pcall"
+	2	[34]	GETTABUP 	3 0 -2	; _ENV "geterrorhandler"
+	3	[34]	CALL     	3 1 2
+	4	[34]	MOVE     	4 1
+	5	[34]	CALL     	2 3 2
+	6	[34]	TEST     	2 1
+	7	[34]	JMP      	0 4	; to 12
+	8	[35]	SELF     	2 0 -3	; "print"
+	9	[35]	LOADK    	4 -4	; "|cffff7f7fError|r: %s"
+	10	[35]	MOVE     	5 1
+	11	[35]	CALL     	2 4 1
+	12	[37]	RETURN   	0 1
+
+function <nfAddon.lua:41,45> (20 instructions at 00000000003FC370)
+2+ params, 6 slots, 1 upvalue, 2 locals, 7 constants, 0 functions
+	1	[42]	GETTABUP 	2 0 -1	; _ENV "tostring"
+	2	[42]	MOVE     	3 1
+	3	[42]	CALL     	2 2 2
+	4	[42]	MOVE     	1 2
+	5	[43]	LOADK    	2 -2	; "|cffff6fff%s|r: "
+	6	[43]	MOVE     	3 1
+	7	[43]	CONCAT   	2 2 3
+	8	[43]	SELF     	2 2 -3	; "format"
+	9	[43]	GETTABLE 	4 0 -4	; "name"
+	10	[43]	TEST     	4 1
+	11	[43]	JMP      	0 1	; to 13
+	12	[43]	LOADK    	4 -5	; "?"
+	13	[43]	VARARG   	5 0
+	14	[43]	CALL     	2 0 2
+	15	[43]	MOVE     	1 2
+	16	[44]	GETTABUP 	2 0 -6	; _ENV "DEFAULT_CHAT_FRAME"
+	17	[44]	SELF     	2 2 -7	; "AddMessage"
+	18	[44]	MOVE     	4 1
+	19	[44]	CALL     	2 3 1
+	20	[45]	RETURN   	0 1
+
+function <nfAddon.lua:47,51> (20 instructions at 00000000003FC400)
+2+ params, 6 slots, 1 upvalue, 2 locals, 7 constants, 0 functions
+	1	[48]	GETTABUP 	2 0 -1	; _ENV "tostring"
+	2	[48]	MOVE     	3 1
+	3	[48]	CALL     	2 2 2
+	4	[48]	MOVE     	1 2
+	5	[49]	LOADK    	2 -2	; "%s> "
+	6	[49]	MOVE     	3 1
+	7	[49]	CONCAT   	2 2 3
+	8	[49]	SELF     	2 2 -3	; "format"
+	9	[49]	GETTABUP 	4 0 -4	; _ENV "date"
+	10	[49]	LOADK    	5 -5	; "%Y-%m-%d %H:%M:%S"
+	11	[49]	CALL     	4 2 2
+	12	[49]	VARARG   	5 0
+	13	[49]	CALL     	2 0 2
+	14	[49]	MOVE     	1 2
+	15	[50]	GETTABLE 	2 0 -6	; "debuglog"
+	16	[50]	GETTABLE 	3 0 -6	; "debuglog"
+	17	[50]	LEN      	3 3
+	18	[50]	ADD      	3 3 -7	; - 1
+	19	[50]	SETTABLE 	2 3 1
+	20	[51]	RETURN   	0 1
+
+function <nfAddon.lua:62,83> (43 instructions at 00000000003FC520)
+3 params, 8 slots, 4 upvalues, 5 locals, 7 constants, 0 functions
+	1	[63]	SELF     	3 0 -1	; "argcheck"
+	2	[63]	MOVE     	5 1
+	3	[63]	LOADK    	6 -2	; 1
+	4	[63]	LOADK    	7 -3	; "string"
+	5	[63]	CALL     	3 5 1
+	6	[64]	SELF     	3 0 -1	; "argcheck"
+	7	[64]	MOVE     	5 2
+	8	[64]	LOADK    	6 -4	; 2
+	9	[64]	LOADK    	7 -5	; "function"
+	10	[64]	CALL     	3 5 1
+	11	[66]	GETTABUP 	3 0 1	; event_registry
+	12	[67]	GETTABUP 	4 1 1	; event_queue
+	13	[68]	TEST     	3 1
+	14	[68]	JMP      	0 10	; to 25
+	15	[69]	NEWTABLE 	5 0 0
+	16	[69]	MOVE     	3 5
+	17	[69]	SETTABUP 	0 1 3	; event_registry
+	18	[70]	NEWTABLE 	5 0 0
+	19	[70]	MOVE     	4 5
+	20	[70]	SETTABUP 	1 1 4	; event_queue
+	21	[71]	GETUPVAL 	5 2	; event_handler
+	22	[71]	SELF     	5 5 -6	; "RegisterEvent"
+	23	[71]	MOVE     	7 1
+	24	[71]	CALL     	5 3 1
+	25	[74]	GETTABLE 	5 3 2
+	26	[74]	TEST     	5 1
+	27	[74]	JMP      	0 3	; to 31
+	28	[74]	GETTABLE 	5 4 2
+	29	[74]	TEST     	5 0
+	30	[74]	JMP      	0 3	; to 34
+	31	[74]	MOVE     	5 2
+	32	[74]	LOADBOOL 	6 0 0
+	33	[74]	RETURN   	5 3
+	34	[76]	GETTABUP 	5 3 1	; event_isiterating
+	35	[76]	TEST     	5 0
+	36	[76]	JMP      	0 2	; to 39
+	37	[77]	SETTABLE 	4 2 -7	; - true
+	38	[77]	JMP      	0 1	; to 40
+	39	[79]	SETTABLE 	3 2 -7	; - true
+	40	[82]	MOVE     	5 2
+	41	[82]	LOADBOOL 	6 1 0
+	42	[82]	RETURN   	5 3
+	43	[83]	RETURN   	0 1
+
+function <nfAddon.lua:85,100> (31 instructions at 00000000003FC490)
+3 params, 8 slots, 4 upvalues, 5 locals, 3 constants, 0 functions
+	1	[86]	GETTABUP 	3 0 1	; event_registry
+	2	[87]	GETTABUP 	4 1 1	; event_queue
+	3	[88]	TEST     	3 1
+	4	[88]	JMP      	0 1	; to 6
+	5	[88]	RETURN   	0 1
+	6	[90]	GETTABLE 	5 3 2
+	7	[90]	TEST     	5 1
+	8	[90]	JMP      	0 4	; to 13
+	9	[90]	GETTABLE 	5 4 2
+	10	[90]	TEST     	5 1
+	11	[90]	JMP      	0 1	; to 13
+	12	[90]	RETURN   	0 1
+	13	[92]	SETTABLE 	3 2 -1	; - nil
+	14	[93]	SETTABLE 	4 2 -1	; - nil
+	15	[95]	GETTABUP 	5 2 -2	; _ENV "next"
+	16	[95]	MOVE     	6 3
+	17	[95]	CALL     	5 2 2
+	18	[95]	TEST     	5 1
+	19	[95]	JMP      	0 11	; to 31
+	20	[95]	GETTABUP 	5 2 -2	; _ENV "next"
+	21	[95]	MOVE     	6 4
+	22	[95]	CALL     	5 2 2
+	23	[95]	TEST     	5 1
+	24	[95]	JMP      	0 6	; to 31
+	25	[96]	SETTABUP 	0 1 -1	; event_registry nil
+	26	[97]	SETTABUP 	1 1 -1	; event_queue nil
+	27	[98]	GETUPVAL 	5 3	; event_handler
+	28	[98]	SELF     	5 5 -3	; "UnregisterEvent"
+	29	[98]	MOVE     	7 1
+	30	[98]	CALL     	5 3 1
+	31	[100]	RETURN   	0 1
+
+function <nfAddon.lua:102,113> (22 instructions at 00000000003FC5B0)
+2 params, 7 slots, 1 upvalue, 3 locals, 7 constants, 1 function
+	1	[103]	GETTABUP 	2 0 -1	; _ENV "self"
+	2	[103]	SELF     	2 2 -2	; "argcheck"
+	3	[103]	MOVE     	4 0
+	4	[103]	LOADK    	5 -3	; 1
+	5	[103]	LOADK    	6 -4	; "string"
+	6	[103]	CALL     	2 5 1
+	7	[104]	GETTABUP 	2 0 -1	; _ENV "self"
+	8	[104]	SELF     	2 2 -2	; "argcheck"
+	9	[104]	MOVE     	4 1
+	10	[104]	LOADK    	5 -5	; 2
+	11	[104]	LOADK    	6 -6	; "function"
+	12	[104]	CALL     	2 5 1
+	13	[106]	LOADNIL  	2 0
+	14	[109]	CLOSURE  	3 0	; 00000000003FC7F0
+	15	[109]	MOVE     	2 3
+	16	[110]	GETTABUP 	3 0 -1	; _ENV "self"
+	17	[110]	SELF     	3 3 -7	; "event_register"
+	18	[110]	MOVE     	5 0
+	19	[110]	MOVE     	6 2
+	20	[110]	CALL     	3 4 1
+	21	[112]	RETURN   	1 2
+	22	[113]	RETURN   	0 1
+
+function <nfAddon.lua:106,109> (10 instructions at 00000000003FC7F0)
+0+ params, 4 slots, 4 upvalues, 0 locals, 2 constants, 0 functions
+	1	[107]	GETTABUP 	0 0 -1	; _ENV "self"
+	2	[107]	SELF     	0 0 -2	; "event_unregister"
+	3	[107]	GETUPVAL 	2 1	; event
+	4	[107]	GETUPVAL 	3 2	; f
+	5	[107]	CALL     	0 4 1
+	6	[108]	GETUPVAL 	0 3	; func
+	7	[108]	VARARG   	1 0
+	8	[108]	TAILCALL 	0 0 0
+	9	[108]	RETURN   	0 0
+	10	[109]	RETURN   	0 1
+
+function <nfAddon.lua:115,136> (41 instructions at 00000000003FC910)
+2+ params, 13 slots, 5 upvalues, 14 locals, 7 constants, 0 functions
+	1	[116]	GETTABUP 	2 0 1	; event_isiterating
+	2	[116]	TEST     	2 0
+	3	[116]	JMP      	0 6	; to 10
+	4	[117]	GETUPVAL 	2 1	; mod
+	5	[117]	SELF     	2 2 -1	; "debug"
+	6	[117]	LOADK    	4 -2	; "event %q looped!"
+	7	[117]	MOVE     	5 1
+	8	[117]	CALL     	2 4 1
+	9	[118]	RETURN   	0 1
+	10	[121]	GETTABUP 	2 2 1	; event_registry
+	11	[122]	GETTABUP 	3 3 1	; event_queue
+	12	[124]	SETTABUP 	0 1 -3	; event_isiterating true
+	13	[125]	LOADNIL  	4 1
+	14	[126]	GETTABUP 	6 4 -4	; _ENV "pairs"
+	15	[126]	MOVE     	7 2
+	16	[126]	CALL     	6 2 4
+	17	[126]	JMP      	0 12	; to 30
+	18	[127]	GETTABUP 	10 4 -5	; _ENV "pcall"
+	19	[127]	MOVE     	11 9
+	20	[127]	VARARG   	12 0
+	21	[127]	CALL     	10 0 3
+	22	[127]	MOVE     	5 11
+	23	[127]	MOVE     	4 10
+	24	[128]	TEST     	4 1
+	25	[128]	JMP      	0 4	; to 30
+	26	[128]	GETUPVAL 	10 1	; mod
+	27	[128]	SELF     	10 10 -6	; "softerror"
+	28	[128]	MOVE     	12 5
+	29	[128]	CALL     	10 3 1
+	30	[126]	TFORCALL 	6 1
+	31	[126]	TFORLOOP 	8 -14	; to 18
+	32	[130]	SETTABUP 	0 1 -7	; event_isiterating nil
+	33	[132]	GETTABUP 	6 4 -4	; _ENV "pairs"
+	34	[132]	MOVE     	7 3
+	35	[132]	CALL     	6 2 4
+	36	[132]	JMP      	0 2	; to 39
+	37	[133]	SETTABLE 	2 9 -3	; - true
+	38	[134]	SETTABLE 	3 9 -7	; - nil
+	39	[132]	TFORCALL 	6 1
+	40	[132]	TFORLOOP 	8 -4	; to 37
+	41	[136]	RETURN   	0 1
+
+function <nfAddon.lua:149,160> (22 instructions at 00000000003FC880)
+0 params, 6 slots, 3 upvalues, 2 locals, 6 constants, 0 functions
+	1	[150]	GETUPVAL 	0 0	; trecycle
+	2	[150]	LEN      	0 0
+	3	[150]	GETTABUP 	0 0 0	; trecycle
+	4	[151]	TEST     	0 0
+	5	[151]	JMP      	0 4	; to 10
+	6	[152]	GETUPVAL 	1 0	; trecycle
+	7	[152]	LEN      	1 1
+	8	[152]	SETTABUP 	0 1 -1	; trecycle nil
+	9	[152]	JMP      	0 11	; to 21
+	10	[154]	GETUPVAL 	1 1	; timer_handler
+	11	[154]	SELF     	1 1 -2	; "CreateAnimationGroup"
+	12	[154]	CALL     	1 2 2
+	13	[155]	SELF     	2 1 -3	; "CreateAnimation"
+	14	[155]	CALL     	2 2 2
+	15	[155]	MOVE     	0 2
+	16	[156]	SETTABLE 	0 -4 1	; "parent" -
+	17	[157]	SELF     	2 0 -5	; "SetScript"
+	18	[157]	LOADK    	4 -6	; "OnFinished"
+	19	[157]	GETUPVAL 	5 2	; T_dispatch
+	20	[157]	CALL     	2 4 1
+	21	[159]	RETURN   	0 2
+	22	[160]	RETURN   	0 1
+
+function <nfAddon.lua:162,164> (5 instructions at 00000000003FCAC0)
+1 param, 2 slots, 1 upvalue, 1 local, 1 constant, 0 functions
+	1	[163]	GETUPVAL 	1 0	; trecycle
+	2	[163]	LEN      	1 1
+	3	[163]	ADD      	1 1 -1	; - 1
+	4	[163]	SETTABUP 	0 1 0	; trecycle
+	5	[164]	RETURN   	0 1
+
+function <nfAddon.lua:166,177> (14 instructions at 00000000003FC9A0)
+1 param, 4 slots, 2 upvalues, 2 locals, 3 constants, 0 functions
+	1	[167]	GETTABLE 	1 0 -1	; "func"
+	2	[169]	GETTABLE 	2 0 -2	; "rpt"
+	3	[169]	TEST     	2 1
+	4	[169]	JMP      	0 6	; to 11
+	5	[170]	SETTABLE 	0 -2 -3	; "rpt" nil
+	6	[171]	SETTABLE 	0 -1 -3	; "func" nil
+	7	[172]	SETTABUP 	0 1 -3	; timer_registry nil
+	8	[173]	GETUPVAL 	2 1	; deltimer
+	9	[173]	MOVE     	3 0
+	10	[173]	CALL     	2 2 1
+	11	[176]	MOVE     	2 1
+	12	[176]	TAILCALL 	2 1 0
+	13	[176]	RETURN   	2 0
+	14	[177]	RETURN   	0 1
+
+function <nfAddon.lua:179,197> (44 instructions at 00000000003FCA30)
+4 params, 9 slots, 2 upvalues, 5 locals, 14 constants, 0 functions
+	1	[180]	SELF     	4 0 -1	; "argcheck"
+	2	[180]	MOVE     	6 1
+	3	[180]	LOADK    	7 -2	; 1
+	4	[180]	LOADK    	8 -3	; "number"
+	5	[180]	CALL     	4 5 1
+	6	[181]	SELF     	4 0 -1	; "argcheck"
+	7	[181]	MOVE     	6 3
+	8	[181]	LOADK    	7 -4	; 3
+	9	[181]	LOADK    	8 -5	; "function"
+	10	[181]	CALL     	4 5 1
+	11	[183]	GETTABUP 	4 0 3	; timer_registry
+	12	[183]	TEST     	4 0
+	13	[183]	JMP      	0 3	; to 17
+	14	[183]	MOVE     	4 3
+	15	[183]	LOADBOOL 	5 0 0
+	16	[183]	RETURN   	4 3
+	17	[185]	GETUPVAL 	4 1	; gettimer
+	18	[185]	CALL     	4 1 2
+	19	[186]	NOT      	5 2
+	20	[186]	NOT      	5 5
+	21	[186]	SETTABLE 	4 -6 5	; "rpt" -
+	22	[187]	SETTABLE 	4 -7 3	; "func" -
+	23	[189]	LT       	0 1 -8	; - 0.01
+	24	[189]	JMP      	0 1	; to 26
+	25	[189]	LOADK    	1 -8	; 0.01
+	26	[191]	GETTABLE 	5 4 -9	; "parent"
+	27	[191]	SELF     	5 5 -10	; "SetLooping"
+	28	[191]	TEST     	2 0
+	29	[191]	JMP      	0 3	; to 33
+	30	[191]	LOADK    	7 -11	; "REPEAT"
+	31	[191]	TEST     	7 1
+	32	[191]	JMP      	0 1	; to 34
+	33	[191]	LOADK    	7 -12	; "NONE"
+	34	[191]	CALL     	5 3 1
+	35	[192]	SELF     	5 4 -13	; "SetDuration"
+	36	[192]	MOVE     	7 1
+	37	[192]	CALL     	5 3 1
+	38	[194]	GETTABLE 	5 4 -9	; "parent"
+	39	[194]	SELF     	5 5 -14	; "Play"
+	40	[194]	CALL     	5 2 1
+	41	[196]	MOVE     	5 3
+	42	[196]	LOADBOOL 	6 1 0
+	43	[196]	RETURN   	5 3
+	44	[197]	RETURN   	0 1
+
+function <nfAddon.lua:199,208> (14 instructions at 00000000003FCBE0)
+2 params, 5 slots, 2 upvalues, 3 locals, 5 constants, 0 functions
+	1	[200]	GETTABUP 	2 0 1	; timer_registry
+	2	[201]	TEST     	2 1
+	3	[201]	JMP      	0 1	; to 5
+	4	[201]	RETURN   	0 1
+	5	[203]	SETTABUP 	0 1 -1	; timer_registry nil
+	6	[204]	GETTABLE 	3 2 -2	; "parent"
+	7	[204]	SELF     	3 3 -3	; "Stop"
+	8	[204]	CALL     	3 2 1
+	9	[205]	SETTABLE 	2 -4 -1	; "rpt" nil
+	10	[206]	SETTABLE 	2 -5 -1	; "func" nil
+	11	[207]	GETUPVAL 	3 1	; deltimer
+	12	[207]	MOVE     	4 2
+	13	[207]	CALL     	3 2 1
+	14	[208]	RETURN   	0 1
+
+function <nfAddon.lua:217,225> (15 instructions at 00000000003FCD00)
+0 params, 3 slots, 2 upvalues, 1 local, 3 constants, 0 functions
+	1	[218]	GETUPVAL 	0 0	; frecycle
+	2	[218]	LEN      	0 0
+	3	[218]	GETTABUP 	0 0 0	; frecycle
+	4	[219]	TEST     	0 0
+	5	[219]	JMP      	0 4	; to 10
+	6	[220]	GETUPVAL 	1 0	; frecycle
+	7	[220]	LEN      	1 1
+	8	[220]	SETTABUP 	0 1 -1	; frecycle nil
+	9	[220]	JMP      	0 4	; to 14
+	10	[222]	GETTABUP 	1 1 -2	; _ENV "CreateFrame"
+	11	[222]	LOADK    	2 -3	; "Frame"
+	12	[222]	CALL     	1 2 2
+	13	[222]	MOVE     	0 1
+	14	[224]	RETURN   	0 2
+	15	[225]	RETURN   	0 1
+
+function <nfAddon.lua:227,229> (5 instructions at 00000000003FCC70)
+1 param, 2 slots, 1 upvalue, 1 local, 1 constant, 0 functions
+	1	[228]	GETUPVAL 	1 0	; frecycle
+	2	[228]	LEN      	1 1
+	3	[228]	ADD      	1 1 -1	; - 1
+	4	[228]	SETTABUP 	0 1 0	; frecycle
+	5	[229]	RETURN   	0 1
+
+function <nfAddon.lua:231,241> (22 instructions at 00000000003FC640)
+2 params, 7 slots, 2 upvalues, 3 locals, 5 constants, 1 function
+	1	[232]	SELF     	2 0 -1	; "argcheck"
+	2	[232]	MOVE     	4 1
+	3	[232]	LOADK    	5 -2	; 1
+	4	[232]	LOADK    	6 -3	; "function"
+	5	[232]	CALL     	2 5 1
+	6	[234]	GETTABUP 	2 0 1	; draw_registry
+	7	[234]	TEST     	2 0
+	8	[234]	JMP      	0 3	; to 12
+	9	[234]	MOVE     	2 1
+	10	[234]	LOADBOOL 	3 0 0
+	11	[234]	RETURN   	2 3
+	12	[236]	GETUPVAL 	2 1	; getframe
+	13	[236]	CALL     	2 1 2
+	14	[237]	SELF     	3 2 -4	; "SetScript"
+	15	[237]	LOADK    	5 -5	; "OnUpdate"
+	16	[237]	CLOSURE  	6 0	; 00000000003FCD90
+	17	[237]	CALL     	3 4 1
+	18	[238]	SETTABUP 	0 1 2	; draw_registry
+	19	[240]	MOVE     	3 1
+	20	[240]	LOADBOOL 	4 1 0
+	21	[240]	RETURN   	3 3
+	22	[241]	RETURN   	0 1
+
+function <nfAddon.lua:237,237> (4 instructions at 00000000003FCD90)
+2 params, 4 slots, 1 upvalue, 2 locals, 0 constants, 0 functions
+	1	[237]	GETUPVAL 	2 0	; func
+	2	[237]	MOVE     	3 1
+	3	[237]	CALL     	2 2 1
+	4	[237]	RETURN   	0 1
+
+function <nfAddon.lua:243,250> (13 instructions at 00000000003FCB50)
+2 params, 7 slots, 2 upvalues, 3 locals, 3 constants, 0 functions
+	1	[244]	GETTABUP 	2 0 1	; draw_registry
+	2	[245]	TEST     	2 1
+	3	[245]	JMP      	0 1	; to 5
+	4	[245]	RETURN   	0 1
+	5	[247]	SETTABUP 	0 1 -1	; draw_registry nil
+	6	[248]	SELF     	3 2 -2	; "SetScript"
+	7	[248]	LOADK    	5 -3	; "OnUpdate"
+	8	[248]	LOADNIL  	6 0
+	9	[248]	CALL     	3 4 1
+	10	[249]	GETUPVAL 	3 1	; delframe
+	11	[249]	MOVE     	4 2
+	12	[249]	CALL     	3 2 1
+	13	[250]	RETURN   	0 1
+
+function <nfAddon.lua:252,262> (13 instructions at 00000000003FCEB0)
+2 params, 7 slots, 0 upvalues, 3 locals, 4 constants, 1 function
+	1	[253]	SELF     	2 0 -1	; "argcheck"
+	2	[253]	MOVE     	4 1
+	3	[253]	LOADK    	5 -2	; 1
+	4	[253]	LOADK    	6 -3	; "function"
+	5	[253]	CALL     	2 5 1
+	6	[255]	LOADNIL  	2 0
+	7	[258]	CLOSURE  	3 0	; 00000000003FCE20
+	8	[258]	MOVE     	2 3
+	9	[259]	SELF     	3 0 -4	; "draw_register"
+	10	[259]	MOVE     	5 2
+	11	[259]	CALL     	3 3 1
+	12	[261]	RETURN   	1 2
+	13	[262]	RETURN   	0 1
+
+function <nfAddon.lua:255,258> (9 instructions at 00000000003FCE20)
+1 param, 4 slots, 3 upvalues, 1 local, 1 constant, 0 functions
+	1	[256]	GETUPVAL 	1 0	; self
+	2	[256]	SELF     	1 1 -1	; "draw_unregister"
+	3	[256]	GETUPVAL 	3 1	; f
+	4	[256]	CALL     	1 3 1
+	5	[257]	GETUPVAL 	1 2	; func
+	6	[257]	MOVE     	2 0
+	7	[257]	TAILCALL 	1 2 0
+	8	[257]	RETURN   	1 0
+	9	[258]	RETURN   	0 1
