@@ -165,6 +165,7 @@
     
     function T_dispatch(T)
       local func = T.func
+      local realdur = T:GetElapsed()
       
       if not T.rpt then
         T.rpt = nil
@@ -173,7 +174,7 @@
         deltimer(T)
       end
       
-      return func()
+      return func(realdur)
     end
     
     function mod:timer_register(delay,rpt,func)
@@ -191,6 +192,7 @@
       T.parent:SetLooping(rpt and 'REPEAT' or 'NONE')
       T:SetDuration(delay)
       
+      timer_registry[func] = T
       T.parent:Play()
       
       return func,true
