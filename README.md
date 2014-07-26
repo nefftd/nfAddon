@@ -26,4 +26,4 @@ Why statically embedded?
 Documentation
 -------------
 
-- Read the source. It's small, generously formatted and easy to understand. There's only a handful of functions to look at, and they're all pretty obvious. 
+Read the source. It's small, generously formatted and easy to understand. There's only a handful of functions to look at, and they're all pretty obvious. 
