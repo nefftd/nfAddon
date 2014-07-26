@@ -20,7 +20,7 @@ Why statically embedded?
 - Does not incur the nasty execution cap incidentally. Since each addon has its own event handler, one addon using up too much CPU time on an event like CLEU will not prevent other addons' callbacks from firing. 
 - Accurate CPU profiling. Since all handlers are isolated per-addon, one addon cannot be "blamed" for the CPU usage of other addons just because its embedded copy of the lib got loaded first, like with Ace. 
 - Why not? The design is simple, and the overhead is miniscule. 
-- Think of nfAddon more as an addon stub with some included facilities, and it makes sense. 
+- Think of nfAddon more as an addon stub with some included facilities, and it makes sense. I'm not trying to make the next Ace, because Ace is already good. I'm trying to go the simpler, less feature-packed route, because I find it more comfortable for smaller addon projects. 
 
 
 Documentation
