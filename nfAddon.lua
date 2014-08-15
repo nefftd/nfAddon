@@ -99,7 +99,7 @@
       end
     end
     
-    function event_runonce(event,func)
+    function mod:event_runonce(event,func)
       self:argcheck(event,1,'string')
       self:argcheck(func,2,'function')
       
@@ -163,7 +163,7 @@
       trecycle[#trecycle+1] = T
     end
     
-    function T_dispatch(T)
+    function T_dispatch(T)  -- local
       local func = T.func
       local realdur = T:GetElapsed()
       
@@ -230,7 +230,7 @@
       frecycle[#frecycle+1] = F
     end
     
-    function mod:draw_register(func)
+    function mod:update_register(func)
       self:argcheck(func,1,'function')
       
       if draw_registry[func] then return func,false end
@@ -242,7 +242,7 @@
       return func,true
     end
     
-    function mod:draw_unregister(func)
+    function mod:update_unregister(func)
       local F = draw_registry[func]
       if not F then return end
       
@@ -251,14 +251,14 @@
       delframe(F)
     end
     
-    function mod:draw_next(func)
+    function mod:update_next(func)
       self:argcheck(func,1,'function')
       
       local f; f = function(e)
-        self:draw_unregister(f)
+        self:update_unregister(f)
         return func(e)
       end
-      self:draw_register(f)
+      self:update_register(f)
       
       return func
     end
