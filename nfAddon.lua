@@ -20,6 +20,10 @@
       end
     end
     
+    -- Note: Will not (and can not) capture the name of the invoking function
+    -- if it is a tail call. This information is not available in the traceback.
+    -- It will instead name the function '?'.
+    
     function mod:argcheck(val,argn,...)
       if not checktypelist(type(val),...) then
         local name = debugstack(2,1,0):match("in function `([^']+)'") or '?'
@@ -165,11 +169,12 @@
     
     function T_dispatch(T)  -- local
       local func = T.func
-      local realdur = T:GetElapsed()
+      local realdur = GetTime() - T.started
       
       if not T.rpt then
         T.rpt = nil
         T.func = nil
+        T.started = nil
         timer_registry[func] = nil
         deltimer(T)
       end
@@ -186,6 +191,7 @@
       local T = gettimer()
       T.rpt = (not not rpt)
       T.func = func
+      T.started = GetTime()
       
       if delay < .01 then delay = .01 end  -- Thanks, Ace3
       
@@ -206,60 +212,7 @@
       T.parent:Stop()
       T.rpt = nil
       T.func = nil
+      T.started = nil
       deltimer(T)
-    end
-  end
-
-
--- Screen draws
-  do
-    local frecycle = {}
-    local draw_registry = {}
-    
-    local function getframe()
-      local F = frecycle[#frecycle]
-      if F then
-        frecycle[#frecycle] = nil
-      else
-        F = CreateFrame('Frame')
-      end
-      return F
-    end
-    
-    local function delframe(F)
-      frecycle[#frecycle+1] = F
-    end
-    
-    function mod:update_register(func)
-      self:argcheck(func,1,'function')
-      
-      if draw_registry[func] then return func,false end
-      
-      local F = getframe()
-      F:SetScript('OnUpdate',function(_,e) func(e) end)
-      draw_registry[func] = F
-      
-      return func,true
-    end
-    
-    function mod:update_unregister(func)
-      local F = draw_registry[func]
-      if not F then return end
-      
-      draw_registry[func] = nil
-      F:SetScript('OnUpdate',nil)
-      delframe(F)
-    end
-    
-    function mod:update_next(func)
-      self:argcheck(func,1,'function')
-      
-      local f; f = function(e)
-        self:update_unregister(f)
-        return func(e)
-      end
-      self:update_register(f)
-      
-      return func
     end
   end
